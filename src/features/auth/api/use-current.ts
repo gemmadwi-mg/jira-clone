@@ -12,7 +12,7 @@ export const useCurrent = () => {
         return null;
       }
 
-      const data = await response.json();
+      const { data } = await response.json();
 
       return data;
     },
