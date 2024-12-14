@@ -11,7 +11,7 @@ export async function createSessionClient() {
 
   const session = await cookies().get(AUTH_COOKIE);
 
-  if (!session || !sessionStorage.value) {
+  if (!session || !session.value) {
     throw new Error("Unauthorized");
   }
 
