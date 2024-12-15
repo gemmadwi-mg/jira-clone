@@ -1,6 +1,6 @@
 import { getCurrent } from "@/features/auth/queries";
 import { getWorkspace } from "@/features/workspaces/queries";
-import { EditWorkspaceForm } from "@/features/workspaces/components/edit-workspace-form";
+import { EditWorkspaceForm } from "@/features/workspaces/api/components/edit-workspace-form";
 
 import { redirect } from "next/navigation";
 
