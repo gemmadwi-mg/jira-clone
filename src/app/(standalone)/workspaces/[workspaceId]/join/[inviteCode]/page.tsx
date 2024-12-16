@@ -1,5 +1,5 @@
 import { getCurrent } from "@/features/auth/queries";
-import { JoinWorkspaceForm } from "@/features/workspaces/components/join-workspace-form";
+import { JoinWorkspaceForm } from "@/features/workspaces/api/components/join-workspace-form";
 import { getWorkspaceInfo } from "@/features/workspaces/queries";
 import { redirect } from "next/navigation";
 
