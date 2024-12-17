@@ -12,10 +12,10 @@ import { DataFilters } from "./data-filters";
 import { useTaskFilters } from "../hooks/use-task-filters";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
+import { DataKanban } from "./data-kanban";
 
 export const TaskViewSwitcher = () => {
-  const [{ status, assigneeId, projectId, dueDate }] =
-      useTaskFilters();
+  const [{ status, assigneeId, projectId, dueDate }] = useTaskFilters();
   const [view, setView] = useQueryState("tasks-view", {
     defaultValue: "table",
   });
@@ -28,7 +28,7 @@ export const TaskViewSwitcher = () => {
     projectId,
     assigneeId,
     status,
-    dueDate
+    dueDate,
   });
 
   return (
@@ -65,10 +65,10 @@ export const TaskViewSwitcher = () => {
         ) : (
           <>
             <TabsContent value="table" className="mt-0">
-              <DataTable columns={columns} data={tasks?.documents ?? []}/>
+              <DataTable columns={columns} data={tasks?.documents ?? []} />
             </TabsContent>
             <TabsContent value="kanban" className="mt-0">
-              Data Kanban
+              <DataKanban data={tasks?.documents ?? []} />
             </TabsContent>
             <TabsContent value="calendar" className="mt-0">
               Data Calendar
