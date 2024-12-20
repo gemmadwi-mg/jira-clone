@@ -8,7 +8,7 @@ interface UseGetTaskProps {
 
 export const useGetTask = ({ taskId }: UseGetTaskProps) => {
   const query = useQuery({
-    queryKey: ["tasks", taskId],
+    queryKey: ["task", taskId],
     queryFn: async () => {
       const response = await client.api.tasks[":taskId"].$get({
         param: {
